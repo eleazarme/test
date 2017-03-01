@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :restaurants
+  end
   get 'welcome/index'
 
   resources :restaurants
