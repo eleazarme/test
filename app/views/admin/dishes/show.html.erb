@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dishgroup:</strong>
+  <%= @admin_dish.dishgroup %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @admin_dish.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @admin_dish.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @admin_dish.price %>
+</p>
+
+<%= link_to 'Edit', edit_admin_dish_path(@admin_dish) %> |
+<%= link_to 'Back', admin_dishes_path %>

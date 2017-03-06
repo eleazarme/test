@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Admin Dishes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dishgroup</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_dishes.each do |admin_dish| %>
+      <tr>
+        <td><%= admin_dish.dishgroup %></td>
+        <td><%= admin_dish.name %></td>
+        <td><%= admin_dish.description %></td>
+        <td><%= admin_dish.price %></td>
+        <td><%= link_to 'Show', admin_dish %></td>
+        <td><%= link_to 'Edit', edit_admin_dish_path(admin_dish) %></td>
+        <td><%= link_to 'Destroy', admin_dish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admin Dish', new_admin_dish_path %>
