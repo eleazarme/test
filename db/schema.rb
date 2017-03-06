@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170306210751) do
+ActiveRecord::Schema.define(version: 20170306213711) do
 
   create_table "admin_items", force: :cascade do |t|
     t.decimal  "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "admin_orders", force: :cascade do |t|
+    t.date     "date"
+    t.decimal  "subtotal"
+    t.decimal  "taxes"
+    t.decimal  "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

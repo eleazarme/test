@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @admin_order.date %>
+</p>
+
+<p>
+  <strong>Subtotal:</strong>
+  <%= @admin_order.subtotal %>
+</p>
+
+<p>
+  <strong>Taxes:</strong>
+  <%= @admin_order.taxes %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @admin_order.total %>
+</p>
+
+<%= link_to 'Edit', edit_admin_order_path(@admin_order) %> |
+<%= link_to 'Back', admin_orders_path %>
