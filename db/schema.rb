@@ -10,15 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170306220936) do
+ActiveRecord::Schema.define(version: 20170307004558) do
 
   create_table "admin_dishes", force: :cascade do |t|
     t.string   "dishgroup"
     t.string   "name"
     t.string   "description"
     t.decimal  "price"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "admin_items", force: :cascade do |t|
@@ -37,16 +41,6 @@ ActiveRecord::Schema.define(version: 20170306220936) do
   end
 
   create_table "admin_restaurants", force: :cascade do |t|
-    t.string   "name"
-    t.string   "description"
-    t.string   "address"
-    t.string   "phone"
-    t.string   "logo"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "restaurants", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
     t.string   "address"
